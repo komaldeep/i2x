@@ -1,0 +1,24 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+
+
+# testing
+coverage
+
+# production
+build
+
+#idea files
+.idea/workspace.xml
+..idea/misc.xml
+.idea/jsLibraryMappings.xml
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+
+
+
+# misc
+.DS_Store
+.env
+npm-debug.log
