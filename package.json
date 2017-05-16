@@ -22,23 +22,31 @@
     "sec-to-min": "^1.0.1"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
     "babel-jest": "^19.0.0",
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
     "enzyme": "^2.8.2",
     "expect": "^1.20.2",
     "jest": "^19.0.2",
-    "mocha": "^3.2.0",
+    "mocha": "^3.4.1",
+    "react": "^15.3.2",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.3.2",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4",
-    "redux-devtools": "^3.3.2"
+    "redux-devtools": "^3.3.2",
+    "sinon": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "mocha",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive",
+    "tdd": "npm test -- --watch",
+    "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
+    "build": "webpack -p"
   }
 }
